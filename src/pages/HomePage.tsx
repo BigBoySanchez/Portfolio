@@ -24,54 +24,23 @@ function Header(): JSX.Element {
         Jacob Ativo
       </h1>
       <a
-        href="/Jacob-Ativo-Resume.pdf"
+        href="https://drive.google.com/file/d/1Vx01k7iL8cglLl7mb8zViYiVfKSZ1tSS/view?usp=sharing"
         target="_blank"
         className="
-  border-2 border-white rounded-lg 
-  hover:bg-white active:bg-white transition-colors 
-  font-[inter] text-white 
-  hover:text-[#211B33] active:text-[#211B33] 
-  flex items-center justify-center px-6 py-2
-"
-        aria-label="Download Jacob Ativo Résumé"
+          border-2 border-white rounded-lg 
+          hover:bg-white active:bg-white transition-colors 
+          font-[inter] text-white 
+          hover:text-[#211B33] active:text-[#211B33] 
+          flex items-center justify-center px-6 py-2
+        "
+        aria-label="Download Jacob Ativo Resume"
       >
-        Résumé
+        Resume
       </a>
-
-      {/* Page too short for ts. Keeping it here just in case
-      <div className="hidden sm:flex flex-row space-x-10 sm:space-x-6 text-2xl font-[Bodoni_Moda] italic mt-2 mr-2">
-        <p>Projects</p>
-        <p>Skills</p>
-        <p>Contact</p>
-      </div>
-
-      {// Hamburger Menu }
-      <Drawer.Root>
-        <Drawer.Trigger asChild>
-          <button className="sm:hidden mr-2 mt-3 p-2">
-            <div className="space-y-1 [&>*]:block [&>*]:w-6 [&>*]:h-0.5 [&>*]:bg-white">
-              <span />
-              <span />
-              <span />
-            </div>
-          </button>
-        </Drawer.Trigger>
-
-        {// Drawer for Menu}
-        <Drawer.Overlay className="fixed inset-0 bg-black/40" />
-        <Drawer.Content className="bg-[#2B2036] flex flex-col rounded-t-2xl h-[50vh] mt-24 fixed bottom-0 left-0 right-0">
-          <ul className="p-6 text-white text-center font-[bodoni_moda] italic [&>*]:text-3xl space-y-[8vh]">
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>Contact</li>
-          </ul>
-        </Drawer.Content>
-      </Drawer.Root> */}
     </div>
   );
 }
 
-// WIP: ai slop
 function About(): JSX.Element {
   return (
     <section
@@ -87,56 +56,69 @@ function About(): JSX.Element {
         />
       </div>
       <div className="w-[320px] sm:w-full min-h-[480px] bg-[#211B33] rounded-2xl">
-        <p className="font-[inter] text-2xl font-thin p-3.5">
-          I'm a Computer Science major at Cal State East Bay with a strong foundation in Java, C++, and systems programming. I enjoy building tools that help people communicate, learn, or play—from multiplayer chat apps to interactive web tools. Alongside technical projects, I've worked as a CS tutor and supplemental instructor, helping peers improve their coding skills. I’ve also led tech workshops through community organizations, reinforcing my belief that code is a tool for inclusion.<br /><br />
-
-          Lately, I've been diving deeper into low-level development—exploring NASM, bootloaders, and Linux internals—while continuing to grow my experience in team-based software projects. My long-term goal is to work on embedded systems, security, and tooling that make technology more secure, transparent, and teachable. Whether through open-source work or community education, I want to help others better understand the systems they rely on.
-
+        <p className="font-[inter] text-2xl font-thin p-3.5 text-white">
+          I build at the intersection of silicon and software. As a Computer Science senior at Cal State East Bay and a Research Assistant at the East Bay Deep Learning Lab, my work focuses on co-designing high-performance hardware-software systems and deploying ML architectures for humanitarian and disaster-response applications.<br /><br />
+          This summer, I am joining Professor Priyanka Raina’s Stanford Accelerate Group as a Stanford SURF Fellow. I'll be diving into silicon bring-up, compiler optimization, and automated testing for Kirin—a fabricated ML accelerator SoC.<br /><br />
+          Beyond the terminal, I serve as a peer mentor in the PIAA program supporting AAPI students. When I’m not optimizing assembly routines or training neural nets, you can find me weightlifting and watching live theatre.
         </p>
       </div>
     </section>
   );
 }
 
-
-
 function Projects(): JSX.Element {
   type Project = {
     title: string;
     description: string;
-    demo: string;
+    demo?: string;
     source: string;
   };
 
   const projects: Project[] = [
     {
-      title: "Communication App",
-      description: "Built a multi-user chat application in Java with a team of 5, implementing messaging features and unit tests using JUnit. Followed the SDLC from planning to deployment.",
-      demo: "https://youtu.be/TQXtQrqO0D8",
-      source: "https://github.com/yoshiyahoo/Communication-App",
+      title: "DreamPath",
+      description: "AI video storytelling platform that lets users generate and publish branching 'choose-your-own-adventure' stories through a React Flow canvas. Built with Google Cloud Workflows, Firestore, and GCS.",
+      demo: "https://youtu.be/HTXrhM-f8-0",
+      source: "https://github.com/EugeneVuong/Dream-Path",
     },
     {
-      title: "MESA U Hackathon",
-      description: "Developed an educational game using Pygame that simulates scam emails in a mock inbox. Won “Best Use of GitHub” for effective version control and team collaboration.",
-      demo: "https://youtu.be/x8ZUAvUPp0o",
-      source: "https://github.com/BigBoySanchez/Mesa-U",
+      title: "VexRiscv FPGA Research",
+      description: "Built a reproducible VexRiscv FPGA bring-up pipeline with verification checkpoints and smoke tests. Validated custom RISC-V instruction workflows in Verilator simulation and on FPGA hardware.",
+      demo: "https://youtube.com/playlist?list=PLMxPtMuESPDUCYTlmvYxATj9xP8s5TQhk&si=Rgd7Pnj4Am-lF2sq",
+      source: "https://github.com/BigBoySanchez/VexRiscv",
     },
     {
-      title: "Clown Cafe",
-      description: "Browser-based decoration simulator using Phaser.js and arcade physics. Entirely coded in JavaScript and deployed on itch.io as a fun, interactive project.",
-      demo: "https://bigboysanchez.itch.io/clown-cafe",
-      source: "https://github.com/BigBoySanchez/Clown-Cafe",
+      title: "EasyADs",
+      description: "Won 'Best Use of Freepik' at the Self-Evolving Agents Hack. Built an agentic video-ad generation platform converting product inputs and trend data into ads using Freepik and Linkup.",
+      demo: "https://devpost.com/software/easyads",
+      source: "https://github.com/nicholasmanha/ag-frontend",
+    },
+    {
+      title: "Libhal-exceptions",
+      description: "Built a GitHub Actions workflow using QEMU and GDB to verify embedded C++ exception behavior across STM32F103 and LPC4078 targets. Hardened CI reliability with a watchdog and debugger diagnosis.",
+      source: "https://github.com/libhal/libhal-exceptions",
+    },
+    {
+      title: "Deep Learning Lab Research",
+      description: "Built reproducible semi-supervised ML pipelines for disaster-response social media classification. Containerized GPU workflows and automated Bayesian sweep agents with Docker and Bash.",
+      demo: "https://arxiv.org/pdf/2605.08448",
+      source: "https://github.com/deeplearning-lab-csueb/LLM-guided-SSL-Crisis-Tweets-Classification",
+    },
+    {
+      title: "Realyn Demo",
+      description: "Developed and deployed a solo full-stack AI retail voice-sales assistant using Expo/React Native, FastAPI, Vapi voice agents, Docker, and AWS. Implemented product context capture.",
+      source: "https://github.com/BigBoySanchez/realyn-demo",
     },
   ];
 
   return (
     <section
       className="flex flex-col items-center justify-center mt-6 lg:mt-9 mb-9 px-10 h-auto"
-      aria-label="Portfolio Projects – Java, Python, JavaScript"
+      aria-label="Portfolio Projects – Hardware-Software Co-Design, Embedded Systems, Cloud & AI"
     >
       <h1 className="text-3xl font-bold text-white mb-8 font-[inter]">
         <span className="sr-only">
-          Software Development Projects in Java, Python, JavaScript, Game Development
+          Engineering Projects in FPGA, RISC-V, Embedded C++, Cloud Systems, and Machine Learning
         </span>
         Projects
       </h1>
@@ -144,7 +126,7 @@ function Projects(): JSX.Element {
         {projects.map((project, index) => (
           <a
             key={index}
-            href={project.demo}
+            href={project.demo || project.source}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#211B33] rounded-2xl shadow-md p-6 hover:shadow-xl active:shadow-xl transition-all duration-300 
@@ -156,22 +138,24 @@ function Projects(): JSX.Element {
               <p className="text-gray-300 mt-2 font-[inter]">{project.description}</p>
             </div>
             <div className="flex items-center gap-4 mt-6">
+              {project.demo && (
                 <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-                aria-label={`Open ${project.title} demo`}
-                title="View Demo"
-                onClick={e => e.stopPropagation()}
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white"
+                  aria-label={`Open ${project.title} demo`}
+                  title="View Demo"
+                  onClick={e => e.stopPropagation()}
                 >
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
                 </a>
-                <a
+              )}
+              <a
                 href={project.source}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -179,9 +163,9 @@ function Projects(): JSX.Element {
                 aria-label={`View ${project.title} on GitHub`}
                 title="View Source Code"
                 onClick={e => e.stopPropagation()}
-                >
+              >
                 <FaGithub className="w-5 h-5" />
-                </a>
+              </a>
             </div>
           </a>
         ))}
@@ -192,20 +176,20 @@ function Projects(): JSX.Element {
 
 function Skills(): JSX.Element {
   const skills = {
-    "Programming Languages": ["Java", "JavaScript/TypeScript", "Python", "C/C++", "Assembly"],
-    "Development Tools": ["Git", "GitHub", "Phaser.js", "Pygame", "Lens Studio", "JUnit", "HTML/CSS"],
-    "Soft Skills": ["Team Collaboration", "Public Speaking", "Workshop Facilitation", "Tutoring", "Adaptability"]
+    "Programming Languages": ["C/C++", "Python", "Verilog", "Bash", "Java", "JavaScript/TypeScript"],
+    "Systems & Embedded": ["Linux", "Git/GitHub", "Docker", "GitHub Actions", "GDB", "QEMU", "Verilator", "FPGA", "RISC-V", "CI/CD"],
+    "Cloud & AI Engineering": ["PyTorch", "Hugging Face", "Weights & Biases", "AWS", "Google Cloud Workflows", "Firestore", "GCS", "FastAPI", "Flask", "React/Next.js"]
   };
 
   return (
     <section
       className="flex flex-col items-center justify-center mt-6 lg:mt-9 mb-9 px-10 h-auto"
-      aria-label="Skills – Programming Languages, Development Tools, Soft Skills"
+      aria-label="Skills – Programming Languages, Systems & Embedded, Cloud & AI Engineering"
     >
       <div className="w-full max-w-5xl bg-[#211B33] rounded-2xl p-6">
         <h2 className="text-3xl font-bold text-white mb-8 font-[inter]">
           <span className="sr-only">
-            Skills in Programming Languages, Development Tools, and Soft Skills
+            Skills in Programming Languages, Systems & Embedded, and Cloud & AI Engineering
           </span>
           Skills
         </h2>
@@ -231,7 +215,6 @@ function Skills(): JSX.Element {
     </section>
   );
 }
-
 
 function Contact(): JSX.Element {
   return (
@@ -282,3 +265,4 @@ function Contact(): JSX.Element {
 }
 
 export default HomePage;
+
