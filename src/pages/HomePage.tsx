@@ -59,7 +59,7 @@ function About(): JSX.Element {
         <p className="font-[inter] text-2xl font-thin p-3.5 text-white">
           I build at the intersection of silicon and software. As a Computer Science senior at Cal State East Bay and a Research Assistant at the East Bay Deep Learning Lab, my work focuses on co-designing high-performance hardware-software systems and deploying ML architectures for humanitarian and disaster-response applications.<br /><br />
           This summer, I am joining Professor Priyanka Raina’s Stanford Accelerate Group as a Stanford SURF Fellow. I'll be diving into silicon bring-up, compiler optimization, and automated testing for Kirin—a fabricated ML accelerator SoC.<br /><br />
-          Beyond the terminal, I serve as a peer mentor in the PIAA program supporting AAPI students. When I’m not optimizing assembly routines or training neural nets, you can find me weightlifting and watching live theatre!
+          Beyond the terminal, I serve as a peer mentor in the PIAA program supporting AAPI students. When I’m not optimizing assembly routines or training neural nets, you can find me weightlifting and watching live theatre.
         </p>
       </div>
     </section>
@@ -99,14 +99,15 @@ function Projects(): JSX.Element {
       source: "https://github.com/libhal/libhal-exceptions",
     },
     {
+      title: "Deep Learning Lab Research",
+      description: "Built reproducible semi-supervised ML pipelines for disaster-response social media classification. Containerized GPU workflows and automated Bayesian sweep agents with Docker and Bash.",
+      demo: "https://arxiv.org/pdf/2605.08448",
+      source: "https://github.com/deeplearning-lab-csueb/LLM-guided-SSL-Crisis-Tweets-Classification",
+    },
+    {
       title: "Realyn Demo",
       description: "Developed and deployed a solo full-stack AI retail voice-sales assistant using Expo/React Native, FastAPI, Vapi voice agents, Docker, and AWS. Implemented product context capture.",
       source: "https://github.com/BigBoySanchez/realyn-demo",
-    },
-    {
-      title: "Deep Learning Lab Research",
-      description: "Built reproducible semi-supervised ML pipelines for disaster-response social media classification. Containerized GPU workflows and automated Bayesian sweep agents with Docker and Bash.",
-      source: "https://github.com/deeplearning-lab-csueb/LLM-guided-SSL-Crisis-Tweets-Classification",
     },
   ];
 
